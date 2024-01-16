@@ -1,0 +1,6 @@
+Data Peserta Bootcamp Digital Skill - Golang Backend Development
+1. Nama: Muhammad Abdulrozak Ramadhani
+2. Email: muhammaddhani494@gmail.com
+3. Sistem Operasi yang digunakan: Windows
+4. Akun Gitlab/Github: https://github.com/abdul091006 (abdul091006)
+5. Akun Telegram: @llkkkoh
