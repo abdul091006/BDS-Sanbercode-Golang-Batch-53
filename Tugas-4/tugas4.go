@@ -30,10 +30,7 @@ func main() {
 	// Soal 4
 	var sayuran = []string{}
 	sayur := []string{"Bayam", "Buncis", "Kangkung", "Kubis", "Seledri", "Tauge", "Timun"}
-
-	for i := range sayur{
-		sayuran = append(sayuran, sayur[i])
-	}
+	sayuran = append(sayuran, sayur...)
 
 	for i, value := range sayuran{
 		fmt.Printf("%d. %s \n", i+1, value)
