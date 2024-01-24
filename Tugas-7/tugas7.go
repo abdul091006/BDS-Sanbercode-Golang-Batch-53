@@ -86,7 +86,6 @@ func main() {
 
 	// Soal 4
 	var dataFilm = []movie{}
-
 	tambahDataFilm("LOTR", 120, "action", 1999, &dataFilm)
 	tambahDataFilm("avenger", 120, "action", 2019, &dataFilm)
 	tambahDataFilm("spiderman", 120, "action", 2004, &dataFilm)
