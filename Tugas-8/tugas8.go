@@ -143,16 +143,16 @@ func main() {
 		jariJari: 7,
 		tinggi:   5,
 	}
-	fmt.Println("luas      :", tabung.volume())
-	fmt.Println("keliling  :", tabung.luasPermukaan())
+	fmt.Println("volume      :", tabung.volume())
+	fmt.Println("luas permukaan  :", tabung.luasPermukaan())
 	
 	var balok hitungBangunRuang = balok{
 		panjang: 10,
 		lebar: 5,
 		tinggi: 5,
 	}
-	fmt.Println("luas      :", balok.volume())
-	fmt.Println("keliling  :", balok.luasPermukaan())
+	fmt.Println("volume      :", balok.volume())
+	fmt.Println("luas permukaan  :", balok.luasPermukaan())
 
 	// Soal 2
 	var counterHp merekHp
