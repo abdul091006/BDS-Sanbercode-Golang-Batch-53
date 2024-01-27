@@ -21,17 +21,16 @@ func endApp() {
 		fmt.Println("\nERROR : ", message)
 	}
 }
-func kelilingSegitigaSamaSisi(sisi uint, showText bool) interface{} {
-	defer endApp()
+func kelilingSegitigaSamaSisi(sisi uint, showText bool) (string, error) {
 	switch {
 	case sisi > 0 && showText:
-		return "keliling segitiga sama sisinya dengan sisi " + strconv.Itoa(int(sisi)) + " cm adalah " + strconv.Itoa(int(sisi*3)) + " cm"
+		return "keliling segitiga sama sisinya dengan sisi " + strconv.Itoa(int(sisi)) + " cm adalah " + strconv.Itoa(int(sisi*3)) + " cm", nil
 	case sisi > 0 && !showText:
-		return sisi * 3
+		return strconv.Itoa(int(sisi*3)), nil
 	case sisi == 0 && showText:
-		return errors.New("Maaf anda belum menginput sisi dari segitiga sama sisi")
+		return "", errors.New("Maaf anda belum menginput sisi dari segitiga sama sisi")
 	default:
-		return errors.New("Maaf anda belum menginput sisi dari segitiga sama sisi")
+		return "", errors.New("Maaf anda belum menginput sisi dari segitiga sama sisi")
 	}
 }
 
@@ -71,15 +70,39 @@ func kelilingPersegiPanjang(panjang int, lebar int) int {
 }
 
 func main() {
+	defer endApp()
 	angka := 1
 	// Soal 1
 	defer soal1("Golang Backend Development", 2021)
 
 	// Soal 2
-	fmt.Println(kelilingSegitigaSamaSisi(4, true))
-	fmt.Println(kelilingSegitigaSamaSisi(8, false))
-	fmt.Println(kelilingSegitigaSamaSisi(0, true))
-	fmt.Println(kelilingSegitigaSamaSisi(0, false))
+	segitiga1, err := kelilingSegitigaSamaSisi(4, true)
+	if err == nil {
+		fmt.Println(segitiga1)
+	} else {
+		panic(err.Error())
+	}
+
+	segitiga2, err := kelilingSegitigaSamaSisi(8, false)
+	if err == nil {
+		fmt.Println(segitiga2)
+	} else {
+		panic(err.Error())
+	}
+
+	segitiga3, err := kelilingSegitigaSamaSisi(0, true)
+	if err == nil {
+		fmt.Println(segitiga3)
+	} else {
+		panic(err.Error())
+	}
+
+	segitiga4, err := kelilingSegitigaSamaSisi(0, false)
+	if err == nil {
+		fmt.Println(segitiga4)
+	} else {
+		panic(err.Error())
+	}
 
 	// Soal 3
 	defer cetakAngka(&angka)
